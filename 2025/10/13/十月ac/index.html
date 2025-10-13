@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>十月ac | 远山淡影</title><meta name="author" content="远山淡影"><meta name="copyright" content="远山淡影"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="3494 酿造药水需要的最少时间  ** 给你两个长度为 n 和 m 的整数数组 skill 和 mana。有 n 个巫师，要按顺序酿造 m 个药水。每个药水的法力值为 mana[j],第 i 个巫师在第 j 个药水上处理的时间为 skill[i] * mana[j] 。 要确保每个药水完成后，能立即交给下一个巫师开始工作 返回酿造所有药水所需的最短时间。  有点类似流水线问题 84. 柱形图中最">
+<meta property="og:type" content="article">
+<meta property="og:title" content="十月ac">
+<meta property="og:url" content="http://lebulang11.github.io/2025/10/13/%E5%8D%81%E6%9C%88ac/">
+<meta property="og:site_name" content="远山淡影">
+<meta property="og:description" content="3494 酿造药水需要的最少时间  ** 给你两个长度为 n 和 m 的整数数组 skill 和 mana。有 n 个巫师，要按顺序酿造 m 个药水。每个药水的法力值为 mana[j],第 i 个巫师在第 j 个药水上处理的时间为 skill[i] * mana[j] 。 要确保每个药水完成后，能立即交给下一个巫师开始工作 返回酿造所有药水所需的最短时间。  有点类似流水线问题 84. 柱形图中最">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://lebulang11.github.io/img/avatar.jpg">
+<meta property="article:published_time" content="2025-10-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-13T06:45:12.125Z">
+<meta property="article:author" content="远山淡影">
+<meta property="article:tag" content="cp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lebulang11.github.io/img/avatar.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "十月ac",
+  "url": "http://lebulang11.github.io/2025/10/13/%E5%8D%81%E6%9C%88ac/",
+  "image": "http://lebulang11.github.io/img/avatar.jpg",
+  "datePublished": "2025-10-12T16:00:00.000Z",
+  "dateModified": "2025-10-13T06:45:12.125Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "远山淡影",
+      "url": "http://lebulang11.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://lebulang11.github.io/2025/10/13/%E5%8D%81%E6%9C%88ac/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '十月ac',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/img/macos.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/goku.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">远山淡影</span></a><a class="nav-page-title" href="/"><span class="site-name">十月ac</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">十月ac</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-12T16:00:00.000Z" title="发表于 2025-10-13 00:00:00">2025-10-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-13T06:45:12.125Z" title="更新于 2025-10-13 14:45:12">2025-10-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1>3494 酿造药水需要的最少时间  **</h1>
+<p>给你两个长度为 <code>n</code> 和 <code>m</code> 的整数数组 <code>skill</code> 和 <code>mana</code>。有 <code>n</code> 个巫师，要按顺序酿造 <code>m</code> 个药水。每个药水的法力值为 <code>mana[j]</code>,第 <code>i</code> 个巫师在第 <code>j</code> 个药水上处理的时间为 <code>skill[i] * mana[j]</code> 。</p>
+<p>要确保每个药水完成后，能立即交给下一个巫师开始工作</p>
+<p>返回酿造所有药水所需的最短时间。</p>
+<hr>
+<p>有点类似流水线问题</p>
+<h1>84. 柱形图中最大的矩形 **</h1>
+<p>柱状图中，找出最大面积的矩形，</p>
+<h2 id="暴力">暴力</h2>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">largestRectangleArea</span><span class="params">(<span class="type">int</span>[] heights)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> heights.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">leftArea</span> <span class="operator">=</span> heights[i];</span><br><span class="line">            <span class="type">int</span> <span class="variable">rightArea</span> <span class="operator">=</span> heights[i];</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=i+<span class="number">1</span>;j&lt;n&amp;&amp;heights[j]&gt;=heights[i];j++)&#123;</span><br><span class="line">                rightArea+=heights[i];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=i-<span class="number">1</span>;j&gt;=<span class="number">0</span>&amp;&amp;heights[j]&gt;=heights[i];j--)&#123;</span><br><span class="line">                leftArea+=heights[i];</span><br><span class="line">            &#125;</span><br><span class="line">            ans = ans&gt;leftArea+rightArea-heights[i]?ans:leftArea+rightArea-heights[i];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>1343. 大小为K且平均值大于等于阈值的子数组数目</h1>
+<p>维护一个定长的滑动窗口，先将长度加到 <code>k</code>，然后重复进一个出一个，要有一个变量存储窗口首部的元素（感觉可以直接根据当前长度 <code>k</code> 进行计算，不用存储）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">numOfSubarrays</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> k, <span class="type">int</span> threshold)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;k;i++)</span><br><span class="line">            sum+=arr[i];</span><br><span class="line">        ans = sum*<span class="number">1.0</span>/k&gt;=threshold?<span class="number">1</span>:<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=k;i&lt;arr.length;i++)&#123;</span><br><span class="line">            sum = sum+arr[i]-arr[i-k];</span><br><span class="line">            <span class="keyword">if</span>(sum*<span class="number">1.0</span>/k&gt;=threshold)</span><br><span class="line">                ans+=<span class="number">1</span>; </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>2090. 半径为k的子数组平均值</h1>
+<p>给你一个下标从 0 开始的数组 <code>nums</code>，数组中有 <code>n</code> 个整数，另给一个整数 <code>k</code></p>
+<p>半径为 k 的子数组平均值： <code>nums</code> 中一个以下标 <code>i</code> 为中心且半径为 <code>k</code> 的子数组中所有元素的平均值。如果半径达不到 <code>k</code> ，那么半径为 <code>k</code> 的子数组平均值是 <code>-1</code></p>
+<p>构建一个长度为 <code>n</code> 的数组 <code>avgs</code>，其中 <code>avgs[i]</code> 是以下标 <code>i</code> 为中心的子数组的半径为 <code>k</code> 的子数组平均值。</p>
+<hr>
+<p>那么我可以维护一个长度为 <code>2k</code> 的滑动窗口， 然后就和上面一题一摸一样，维护当前滑动窗口元素之和 <code>sum</code> 。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span>[] getAverages(<span class="type">int</span>[] nums, <span class="type">int</span> k) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> nums.length;</span><br><span class="line">        <span class="type">int</span>[] ans = <span class="keyword">new</span> <span class="title class_">int</span>[n];</span><br><span class="line">        <span class="type">long</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">2</span>*k&amp;&amp;i&lt;n;i++)&#123;</span><br><span class="line">            sum+=nums[i];</span><br><span class="line">            <span class="keyword">if</span>(i&lt;k)&#123;</span><br><span class="line">                ans[i]=-<span class="number">1</span>;</span><br><span class="line">                ans[n-i-<span class="number">1</span>]=-<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(k*<span class="number">2</span>+<span class="number">1</span>&lt;=n)</span><br><span class="line">            ans[k] = (<span class="type">int</span>)(sum/(<span class="number">2</span>*k+<span class="number">1</span>));</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>*k+<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">            sum = sum+nums[i]-nums[i-<span class="number">2</span>*k-<span class="number">1</span>];</span><br><span class="line">            ans[i-k] = (<span class="type">int</span>)(sum/(<span class="number">2</span>*k+<span class="number">1</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>2379. 得到 K 个黑块的最少涂色次数</h1>
+<p>要最少操作，得到K个连续黑块。那么我们就是要统计长度为 <code>k</code> 的滑动窗口，然后这个窗口里面的黑色块最大。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minimumRecolors</span><span class="params">(String blocks, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">bSum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> <span class="variable">max</span> <span class="operator">=</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(blocks.charAt(i)==<span class="string">&#x27;B&#x27;</span>)</span><br><span class="line">                bSum+=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        max = bSum;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=k;i&lt;blocks.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(blocks.charAt(i-k)==<span class="string">&#x27;B&#x27;</span>)</span><br><span class="line">                bSum-=<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(blocks.charAt(i)==<span class="string">&#x27;B&#x27;</span>)</span><br><span class="line">                bSum+=<span class="number">1</span>;</span><br><span class="line">            max = Math.max(max,bSum);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> k-max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>2841. 几乎唯一子数组的最大和</h1>
+<p>要找长度为 <code>k</code> 的和最大的子数组，同时要满足这个子数组有 <code>m</code> 个互不相同的元素。</p>
+<p>如何知道一个子数组 有 <code>m</code> 个互不相同的元素呢? 我的第一直觉是用一个 <code>Set</code> 来存储。但是有一个问题，删去的元素可能当前窗口里还有，比如说 <code>1,1,1,3 (m=2,k=2)</code>，当遍历到 <code>1,3</code>时 ，先加入1，再删去1，。。好像换一下加入和删除的顺序就可以了。也不行，就算是先删除，那么先删1，再加入3，最后 <code>set</code> 中只有 <code>3</code> .</p>
+<p>看来只能用 <code>map</code> 了，加入一个元素，就使其 <code>v</code> 加 1，如果 <code>v==1</code> ，就使<code>m-1</code> ，然后删除一个元素，就使其 <code>v-1</code> ,如果 <code>v==0</code>，那么设置 <code>m+1</code> 。判断有没有 <code>m</code> 个不同的元素，只需要判断 <code>m&lt;=0</code> 即可。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">long</span> <span class="title function_">maxSum</span><span class="params">(List&lt;Integer&gt; nums, <span class="type">int</span> m, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="type">long</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="type">long</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;k;i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">t</span> <span class="operator">=</span> nums.get(i);</span><br><span class="line">            sum+=t;</span><br><span class="line">            map.merge(t,<span class="number">1</span>,(oldVal,newVal)-&gt;oldVal+newVal);</span><br><span class="line">            <span class="keyword">if</span>(map.get(t)==<span class="number">1</span>)</span><br><span class="line">                m-=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(m&lt;=<span class="number">0</span>)</span><br><span class="line">            ans = sum;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=k;i&lt;nums.size();i++)&#123;</span><br><span class="line">            <span class="type">int</span> <span class="variable">t1</span> <span class="operator">=</span> nums.get(i);</span><br><span class="line">            <span class="type">int</span> <span class="variable">t2</span> <span class="operator">=</span> nums.get(i-k);</span><br><span class="line">            sum = sum + t1 -t2;</span><br><span class="line">            map.merge(t2,-<span class="number">1</span>, Integer::sum);</span><br><span class="line">            <span class="keyword">if</span>(map.get(t2)==<span class="number">0</span>)</span><br><span class="line">                m+=<span class="number">1</span>;</span><br><span class="line">            map.merge(t1,<span class="number">1</span>,Integer::sum);</span><br><span class="line">            <span class="keyword">if</span>(map.get(t1)==<span class="number">1</span>)</span><br><span class="line">                m-=<span class="number">1</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(m&lt;=<span class="number">0</span>)</span><br><span class="line">                ans = Math.max(ans,sum);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1>2461. 长度为 K 子数组中的最大和</h1>
+<p>要求子数组中的所有元素各不相同。这次应该可以使用到集合了。集合的长度应该严格满足等于 k。</p>
+<p>其实还是不行，跟上面一样的问题</p>
+<h1>1423. 可获得的最大点数</h1>
+<p>每次行动，可以从行的开头或者末尾拿一张卡牌，最终必须正好拿到 <code>k</code> 张卡牌。</p>
+<p>每次行动的时候，必须从行的开头或者末尾拿一张卡牌。</p>
+<p>选择？如果遍历的话，应该有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mi>k</mi></msup></mrow><annotation encoding="application/x-tex">2^k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8491em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8491em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span></span></span> 个不同的组合。</p>
+<p>首先如果 <code>k=1</code> 那么，就只需要知道第一个和最后一个中的较大值。 如果 <code>k=n</code> ，那么就是整个数组。如果是 <code>k=n-1</code>呢？</p>
+<hr>
+<p>拿走 <code>k</code> 张，剩下 <code>n-k</code> 张，且需要 <code>k</code> 张最大，然后这 <code>k</code> 张是从首尾取的，那么剩下的卡片必然是连续的。也就是说，目标可以转化为求长度为 <code>n-k</code> 的最小和窗口。</p>
+<h1>3090. 每个字符最多出现两次的最长字符串</h1>
+<p>设当前遍历的区间是 <code>left~right</code>,可以知道如果 <code>alpha[right]&gt;2</code>,那么要将<code>left</code> 调整为下一个满足 <code>alpha[right]&lt;=2</code></p>
+<h1>3679. 使库存平衡的最少丢弃次数</h1>
+<p>给你两个整数 <code>w</code> 和 <code>m</code>,以及一个表示第 i 天到达的物品类型 <code>arrivals[i]</code></p>
+<p>操作规则：</p>
+<ul>
+<li>物品可保留或被丢弃，物品只能在到达当天被丢弃</li>
+<li>对于每一天 <code>i</code>,距离</li>
+</ul>
+<hr>
+<p>相当于维护一个长度为 <code>w</code> 的数组，</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://lebulang11.github.io">远山淡影</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://lebulang11.github.io/2025/10/13/%E5%8D%81%E6%9C%88ac/">http://lebulang11.github.io/2025/10/13/%E5%8D%81%E6%9C%88ac/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://lebulang11.github.io" target="_blank">远山淡影</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/cp/">cp</a></div><div class="post-share"><div class="social-share" data-image="/img/avatar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/09/01/%E4%B9%9D%E6%9C%88ac/" title="九月ac"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">九月ac</div></div><div class="info-2"><div class="info-item-1">1792. 最大平均通过率 已知每个班级的学生人数和可以通过的人数，现在再给一个额外的必定能通过考试的学生人数，求能班级平均通过率最大的分配方法。 当前平均通过率 ave=∑1npassitotali/nave=\sum_{1}^{n}\frac{pass_i}{total_i}/nave=∑1n​totali​passi​​/n 所以要怎么使 ave最大？首先越小的 totaltotaltotal 越容易增大通过率 那么应该如何分配呢？可以转换一下问题，在计算  ave  的时候， n 是不变的，也就是说，我们要尽可能的使通过率的和变大。显然把这些人分配给人数比较少的班级收益比较大一些。通过率增加的会比放入人较少的班级更多，那么应该分配给通过率比较高的班级还是通过率比较低的班级呢？ 举个例子，对于 4/5 和 3/5 的通过率，只有一个人可以分配， 分配给第一班，则通过率和是 5/6 + 3/5 = 43/30 ；分配第二班，则通过率和是 4/5 + 4/6 = 44/30 ，可以看出分配给通过率低的班级收益大一点。为什么呢？比如说 4/5 ，增加一个合格的人，通过率固然会提高...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/09/01/%E4%B9%9D%E6%9C%88ac/" title="九月ac"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-01</div><div class="info-item-2">九月ac</div></div><div class="info-2"><div class="info-item-1">1792. 最大平均通过率 已知每个班级的学生人数和可以通过的人数，现在再给一个额外的必定能通过考试的学生人数，求能班级平均通过率最大的分配方法。 当前平均通过率 ave=∑1npassitotali/nave=\sum_{1}^{n}\frac{pass_i}{total_i}/nave=∑1n​totali​passi​​/n 所以要怎么使 ave最大？首先越小的 totaltotaltotal 越容易增大通过率 那么应该如何分配呢？可以转换一下问题，在计算  ave  的时候， n 是不变的，也就是说，我们要尽可能的使通过率的和变大。显然把这些人分配给人数比较少的班级收益比较大一些。通过率增加的会比放入人较少的班级更多，那么应该分配给通过率比较高的班级还是通过率比较低的班级呢？ 举个例子，对于 4/5 和 3/5 的通过率，只有一个人可以分配， 分配给第一班，则通过率和是 5/6 + 3/5 = 43/30 ；分配第二班，则通过率和是 4/5 + 4/6 = 44/30 ，可以看出分配给通过率低的班级收益大一点。为什么呢？比如说 4/5 ，增加一个合格的人，通过率固然会提高...</div></div></div></a><a class="pagination-related" href="/2025/08/13/%E5%85%AB%E6%9C%88ac/" title="八月ac"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-08-13</div><div class="info-item-2">八月ac</div></div><div class="info-2"><div class="info-item-1">113.路径总和 II 给你二叉树的根节点root 和一个整数目标和targetSum ，找出所有从根节点到叶子节点路径总和等于给定目标和的路径 回溯-添加的角度 当前操作：维护一个sum，用目标值减去当前节点的值 子问题：进入左孩子或右孩子，用目标值减去其值 下一个子问题：same 1234567891011121314151617181920212223242526272829303132333435363738/** * Definition for a binary tree node. * public class TreeNode &#123; *     int val; *     TreeNode left; *     TreeNode right; *     TreeNode() &#123;&#125; *     TreeNode(int val) &#123; this.val = val; &#125; *     TreeNode(int val, TreeNode left, TreeNode right) &#123; *         t...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">远山淡影</div><div class="author-info-description">code my life</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/lebulang11"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/lebulang11" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:2937941726@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">3494 酿造药水需要的最少时间  **</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">84. 柱形图中最大的矩形 **</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%B4%E5%8A%9B"><span class="toc-number">2.1.</span> <span class="toc-text">暴力</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">1343. 大小为K且平均值大于等于阈值的子数组数目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">2090. 半径为k的子数组平均值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">2379. 得到 K 个黑块的最少涂色次数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">2841. 几乎唯一子数组的最大和</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">2461. 长度为 K 子数组中的最大和</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">1423. 可获得的最大点数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">3090. 每个字符最多出现两次的最长字符串</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">3679. 使库存平衡的最少丢弃次数</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/13/%E5%8D%81%E6%9C%88ac/" title="十月ac">十月ac</a><time datetime="2025-10-12T16:00:00.000Z" title="发表于 2025-10-13 00:00:00">2025-10-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/01/%E4%B9%9D%E6%9C%88ac/" title="九月ac">九月ac</a><time datetime="2025-08-31T16:00:00.000Z" title="发表于 2025-09-01 00:00:00">2025-09-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/22/Computer%20Network/" title="计算机网络复习笔记">计算机网络复习笔记</a><time datetime="2025-08-22T13:10:39.319Z" title="发表于 2025-08-22 21:10:39">2025-08-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/13/%E5%85%AB%E6%9C%88ac/" title="八月ac">八月ac</a><time datetime="2025-08-13T01:36:00.000Z" title="发表于 2025-08-13 09:36:00">2025-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/04/%E7%BA%A2%E9%BB%91%E6%A0%91/" title="红黑树">红黑树</a><time datetime="2025-08-04T04:37:44.000Z" title="发表于 2025-08-04 12:37:44">2025-08-04</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/pink.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 远山淡影</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.4.3</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">简</button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><div class="js-pjax"><script>(async () => {
+  const showKatex = () => {
+    document.querySelectorAll('#article-container .katex').forEach(el => el.classList.add('katex-show'))
+  }
+
+  if (!window.katex_js_css) {
+    window.katex_js_css = true
+    await btf.getCSS('https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css')
+    if (true) {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js')
+    }
+  }
+
+  showKatex()
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
